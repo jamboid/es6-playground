@@ -1,6 +1,35 @@
 
 const myName = "Jamie";
+const wordPrefix = "The Word is ";
+const namePrefix = "The Name is ";
 
-class NameCaller {
+class WordCaller {
 
+  constructor() {
+  }
+
+  createWordPrefix() {
+    return wordPrefix;
+  }
 }
+
+class NameCaller extends WordCaller {
+  constructor(name) {
+    super();
+    this.name = name;
+  }
+
+  createWordPrefix() {
+    return namePrefix;
+  }
+
+  callName() {
+    let nameToCall = this.createWordPrefix() + this.name;
+
+    return nameToCall;
+  }
+}
+
+let jamieCaller = new NameCaller(myName);
+
+window.console.log(jamieCaller.callName());
