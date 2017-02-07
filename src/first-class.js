@@ -14,7 +14,7 @@ class WordCaller {
 }
 
 class NameCaller extends WordCaller {
-  constructor(name) {
+  constructor(name = "Jimbo") {
     super();
     this.name = name;
   }
@@ -33,3 +33,7 @@ class NameCaller extends WordCaller {
 let jamieCaller = new NameCaller(myName);
 
 window.console.log(jamieCaller.callName());
+
+let mysteryCaller = new NameCaller();
+
+window.console.log(mysteryCaller.callName());
