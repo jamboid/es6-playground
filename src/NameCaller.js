@@ -1,12 +1,10 @@
 
-const myName = "Jamie";
+//const myName = "Jamie";
 const wordPrefix = "The Word is ";
 const namePrefix = "The Name is ";
 
 class WordCaller {
-
-  constructor() {
-  }
+  constructor() { }
 
   createWordPrefix() {
     return wordPrefix;
@@ -30,10 +28,14 @@ class NameCaller extends WordCaller {
   }
 }
 
-let jamieCaller = new NameCaller(myName);
 
-window.console.log(jamieCaller.callName());
 
-let mysteryCaller = new NameCaller();
+// let jamieCaller = new NameCaller(myName);
+//
+// window.console.log(jamieCaller.callName());
+//
+// let mysteryCaller = new NameCaller();
+//
+// window.console.log(mysteryCaller.callName());
 
-window.console.log(mysteryCaller.callName());
+export { NameCaller as NameCaller };
